@@ -1,0 +1,19 @@
+#1: Write a basic download manager
+
+
+Given one of the sample URL's as input. The download manager should
+- Use HEAD command of HTTP to get the meta-data (response-header) of the remote file
+- Get the length of the file using value of "Content-Length" key in response-header
+- start 4 threads and 
+- simultaniously download the file as 4 parts and
+- join the parts and 
+- save in a file
+
+
+
+The HTTP HEAD method asks for a response identical to that of a GET request, but without the
+response body. This is useful for retrieving meta-information written in response
+headers, without having to transport the entire content.
+
+From the response headers, value of the "Content-Length" key will give you the length of
+the remote file in bytes.
